@@ -1,0 +1,179 @@
+@import "../../sass/variables";
+@import "../../sass/globals";
+
+.footer {
+  background-color: #23242a;
+  height: 45vh;
+  color: white;
+  padding-top: 3rem;
+  overflow: hidden;
+  position:absolute;
+  
+  @include breakpoint-down(medium) {
+    height: auto;
+  }
+
+  &__container {
+    position: relative;
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    padding: 1rem;
+    margin: auto;
+    // padding-right: 10rem;
+    flex-wrap: wrap;
+
+    @include breakpoint-down(medium) {
+      width: 30rem;
+    }
+    @include breakpoint-down(small) {
+      width: 20rem;
+      margin:auto;
+      // margin-left:1.5rem;
+    }
+  }
+
+  &__about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.5);
+
+    @include breakpoint-down(medium) {
+      width: 40rem;
+    }
+
+    h4 {
+      font-family: sarina;
+      padding-bottom: 2rem;
+      text-decoration:none;
+      color:rgba(255, 255, 255, 0.5);
+    }
+    p {
+      font-family: roboto;
+      width: 23rem;
+      padding-bottom: 2rem;
+
+      @include breakpoint-down(medium) {
+        width: 30rem;
+      }
+
+      @include breakpoint-down(medium) {
+        width: 18rem;
+        font-size:1rem;
+      }
+    }
+  }
+
+  &__pages {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    align-items: flex-start;
+    h4 {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: roboto;
+      padding-bottom: 2rem;
+
+      @include breakpoint-down(medium) {
+        font-size: 1rem;
+      }
+    }
+
+    a {
+      color: white;
+      font-family: roboto;
+      text-decoration: none !important;
+      font-weight: 500;
+      padding-bottom: 0.4rem;
+
+      @include breakpoint-down(medium) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__demos {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: roboto;
+      padding-bottom: 2rem;
+      @include breakpoint-down(medium) {
+        font-size: 1rem;
+      }
+    }
+
+    a {
+      color: white;
+      font-family: roboto;
+      text-decoration: none !important;
+      padding-bottom: 0.4rem;
+      font-weight: 500;
+      @include breakpoint-down(medium) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    h4 {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: roboto;
+      padding-bottom: 2rem;
+
+      @include breakpoint-down(medium) {
+        font-size: 1rem;
+      }
+    }
+
+    a {
+      color: white;
+      font-family: roboto;
+      text-decoration: none !important;
+      padding-bottom: 0.4rem;
+      font-weight: 500;
+      @include breakpoint-down(medium) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__footnote {
+    width: 100vw;
+    padding-top: 1.2rem;
+    margin: 0.5rem auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__container-footnote {
+    width: 70vw;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+
+    h5 {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    a {
+      text-decoration: none !important;
+      color: white;
+
+        @include breakpoint-down(medium) {
+      font-size: 0.8rem;
+    }
+    }
+  }
+}

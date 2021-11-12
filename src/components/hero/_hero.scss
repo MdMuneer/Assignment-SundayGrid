@@ -1,0 +1,135 @@
+@import "../../sass/variables";
+@import "../../sass/globals";
+
+.hero {
+  background-color: $color-primary-1;
+  height: auto;
+
+  &__container {
+    max-width: 77vw;
+    padding-top: 1rem;
+    width: 100%;
+    margin: 1rem auto;
+    justify-content: space-between;
+
+    @include breakpoint-down(medium) {
+      max-width: 100vw;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      margin-top: 4rem;
+    }
+    @include breakpoint-down(small) {
+      flex-direction: column;
+      // justify-content:center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 75vw;
+      margin-top: 4rem;
+
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    padding-top: 5rem;
+    margin-right: 2rem;
+
+    @include breakpoint-down(medium) {
+      // padding-top: 6rem;
+      margin-right: 0rem;
+      width: 20rem;
+    }
+    @include breakpoint-down(small) {
+      // padding-top: 6rem;
+      padding: 0rem;
+      max-width: 20rem;
+    }
+    // first title
+    &-1 {
+      font-size: $font-med;
+      color: #89a7c3;
+      font-weight: 500;
+      padding-bottom: 1rem;
+
+      @include breakpoint-down(small) {
+        max-width: 10rem;
+      }
+    }
+    // second title
+    &-2 {
+      width: 24rem;
+      color: #000;
+      font-size: 3.4rem;
+      font-weight: 600;
+      padding-bottom: 1rem;
+
+      @include breakpoint-down(mediumlarge) {
+        font-size: 2.8rem;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 1.8rem;
+        width: 15rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 2rem;
+        width: 18rem;
+      }
+    }
+  }
+  //hero button
+  &__button {
+    height: 3rem;
+    width: 9rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    font-size: $font-med;
+    border: solid 1.5px #89a7c3;
+    background-color: #0e6fff !important;
+    font-weight: 800;
+    margin-top: 0.5rem;
+
+    a {
+      color: #fff;
+    }
+
+    &:hover {
+      color: $darkBlue;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    @include breakpoint-down(small) {
+      font-size: 1rem;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    max-height: 100%;
+    width: 35rem;
+
+    img {
+      object-fit: contain;
+      width: 35rem;
+      height: 38rem;
+
+      @include breakpoint-down(mediumlarge) {
+        width: 30rem;
+      }
+      @include breakpoint-down(medium) {
+        // padding:auto;
+        width: 20rem;
+        height: 25rem;
+      }
+      @include breakpoint-down(small) {
+        padding-top: 1rem;
+        width: 20rem;
+        height: 22rem;
+        margin-left: -0.8rem;
+
+      }
+    }
+  }
+}

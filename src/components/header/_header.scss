@@ -1,0 +1,96 @@
+@import "../../sass/variables";
+
+.header {
+  background-color: $color-primary-1;
+  position: relative;
+
+  // header logo styles
+  &__logo {
+    font-family: sarina;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
+  }
+
+  &__hamburger-menu {
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: whitesmoke;
+    margin-top: 1.5rem;
+    transition: 0.5s ease-in-out;
+
+    padding: 1.625rem;
+    border-radius: 5px;
+    // height: 15rem;
+
+    a {
+      display: block;
+      padding: 0.625rem;
+      color: black;
+      text-align: center;
+
+      &:hover {
+        color: #89a7c3;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      font-size: $font-sm;
+      color: #89a7c3;
+      transition: color 300ms ease-in-out;
+      font-weight: 500;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 5px;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+
+      &:hover {
+        color: $darkBlue;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__button {
+    height: 2.5rem;
+    width: 7rem;
+    color: #0e6fff;
+    border-radius: 5px;
+    border: solid 1.5px #89a7c3;
+    padding-top: 0.5rem !important;
+
+    a {
+      color: #0e6fff;
+      font-weight: 800;
+    }
+  }
+
+  svg {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.active-menu {
+  visibility: hidden;
+}

@@ -1,0 +1,114 @@
+@import "mixins";
+@import "variables";
+
+// FONT
+$default-font-size: 1.6rem;
+
+html{
+  box-sizing: border-box; 
+  // font-size: 62.5% ; //10px/16px = 62.5% 1rem = 10px
+  background-color: $color-primary-1;
+  scroll-behavior: smooth;
+
+}
+
+*,
+*::before,
+*::after{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  // font-size: $font-sm;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.3;
+  overflow-x: hidden;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  border: 0;
+
+  @include breakpoint-down(medium) {
+      min-height: 100vh !important;
+  } 
+  @include breakpoint-down(small) {
+      min-height: 100vh;
+
+  }
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Spacing
+.container {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding-top: 1.375rem;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+
+  @include breakpoint-down(large) {
+      max-width:70rem;
+  }
+
+  @include breakpoint-down(medium) {
+      max-width:52rem;
+  }
+
+}
+
+//buttons
+.button {
+  padding: 0.73rem;
+  background: white;
+  cursor: pointer;
+}
+
+
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(small) {
+      display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(medium) {
+      display: none;
+  }
+}
+
